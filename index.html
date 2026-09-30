@@ -130,6 +130,9 @@
           </header>
           <div class="comic-copy px-5 py-4 text-center text-[clamp(.88rem,1.75vw,1.08rem)] leading-[1.02] sm:px-16 sm:py-5">
             <p id="strip-file">Archive file: 034.png</p>
+            <p id="restoration-note" class="mx-auto mt-3 hidden w-fit border border-[#d7ca78] bg-[#443567] px-3 py-2 text-[#fff3a8]" aria-live="polite">
+              Restoration note: Edited for readability from archive materials.
+            </p>
             <p class="mt-3">Writing by D. Mongeni, with contributions by Jake Herrmann · Art and editing by Jake Herrmann · Long Haired Syndicate Studios</p>
           </div>
         </article>
@@ -166,6 +169,7 @@
       const stripPosition = document.querySelector('#strip-position');
       const stripTitle = document.querySelector('#strip-title');
       const stripFile = document.querySelector('#strip-file');
+      const restorationNote = document.querySelector('#restoration-note');
       const archiveGrid = document.querySelector('#archive-grid');
       const firstButton = document.querySelector('#first-comic');
       const previousButton = document.querySelector('#previous-comic');
@@ -242,6 +246,7 @@
         stripPosition.textContent = `Strip ${currentIndex + 1} of ${comics.length}`;
         stripTitle.textContent = `Original Run — ${comic.label}`;
         stripFile.textContent = `Archive file: ${comic.file}`;
+        restorationNote.classList.toggle('hidden', !['005_1', '006_1'].includes(comic.id));
         viewer.disabled = currentIndex === comics.length - 1;
         viewer.setAttribute('aria-label', viewer.disabled ? `Newest comic, ${comic.label}` : `Show comic ${comics[currentIndex + 1].label}`);
         firstButton.disabled = currentIndex === 0;
