@@ -6,6 +6,8 @@ A single-page, responsive reconstruction of the supplied No Clue! webcomic scree
 
 The Characters page reconstructs the cast from the surviving strips and script archive. It links every biographical claim back to relevant comics and explicitly separates confirmed facts, strong inferences, and unresolved archive questions.
 
+The Authors page expands the recovered production credits, recording D. Mongeni as the original credited writer and Jake Herrmann as a writing contributor, artist, and editor.
+
 The reader includes all 41 image files currently stored in the original-run archive. FIRST, BACK, NEXT, and NEWEST are functional; the comic image advances on click; the left and right arrow keys navigate; and every strip can be opened from the archive grid. The selected strip is retained in the page URL as `?comic=034`.
 
 On a wide desktop viewport, the projection stage expands to 1280 pixels and the comic viewer displays strips at up to their native 1100-pixel width. It scales down fluidly on smaller screens.
