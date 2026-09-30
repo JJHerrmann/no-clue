@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A responsive Tailwind reconstruction of the classic No Clue! webcomic layout." />
+    <title>No Clue! The Webcomic! — Tailwind reconstruction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Patrick+Hand&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2320176b'/%3E%3Cpath d='M20 20c2-10 24-12 27 1 3 12-12 13-12 22' fill='none' stroke='%2348c7f2' stroke-width='8' stroke-linecap='round'/%3E%3Ccircle cx='35' cy='53' r='5' fill='%23dc1688'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="mx-auto w-full max-w-[1280px] px-3 pb-10 sm:px-5 xl:px-0">
+      <header class="relative mx-auto min-h-[132px] w-full max-w-[974px] pt-1 sm:min-h-[140px]">
+        <div class="pr-24 sm:pr-40 md:pr-52">
+          <h1 class="ink-text font-display text-[clamp(2.65rem,6.4vw,4.35rem)] leading-[.88] tracking-[.035em]">
+            No Clue<span class="font-sans font-black">‽</span> The Webcomic!
+          </h1>
+          <p class="comic-copy ink-text mt-1 max-w-[710px] text-[clamp(.78rem,2vw,1.13rem)] leading-none">
+            A slice of life comic with no small amount of fictitious shenanigans!
+          </p>
+        </div>
+
+        <div aria-label="No Clue interrobang logo" class="pointer-events-none absolute right-1 top-0 h-32 w-24 sm:right-5 sm:h-36 sm:w-32 md:right-12" role="img">
+          <img src="assets/interrobang.svg" alt="" class="absolute left-1/2 top-0 h-28 w-auto -translate-x-1/2 drop-shadow-[3px_4px_0_#17152e] sm:h-32" />
+        </div>
+
+        <img
+          src="assets/fresh-brewed-2012.svg"
+          alt="Fresh Brewed in 2012!"
+          class="absolute right-44 top-2 z-10 hidden w-44 drop-shadow-[3px_4px_0_rgba(0,0,0,.26)] min-[900px]:block"
+        />
+      </header>
+
+      <nav aria-label="Main navigation" class="mx-auto grid w-full max-w-[974px] grid-cols-3 gap-x-4 gap-y-3 pb-8 text-center md:grid-cols-6 md:gap-2 md:pb-10">
+        <a class="nav-link" href="#characters">Characters</a>
+        <a class="nav-link" href="#home">Home</a>
+        <a id="archive-link" class="nav-link" href="#archive">Archive</a>
+        <a class="nav-link" href="#store">Store</a>
+        <a class="nav-link" href="#authors">Authors</a>
+        <a class="nav-link" href="#schedules">Schedules</a>
+      </nav>
+
+      <main id="home">
+        <section id="comic-stage" aria-label="Featured comic" class="relative mx-auto mt-10 mb-1 w-full pt-[6%] pb-[4%] sm:mt-0">
+          <svg id="beam-svg" aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 974 330">
+            <polygon id="cyan-fill" fill="#38bdf8" fill-opacity=".86" points="44,29 837,66 837,286 97,286" style="mix-blend-mode: screen" />
+            <polyline id="cyan-line" fill="none" points="44,29 837,66 837,286 97,286 44,29" stroke="#8be5ff" stroke-width="2" />
+            <polygon id="magenta-fill" fill="#dc1688" fill-opacity=".86" points="890,29 97,66 97,286 837,286" style="mix-blend-mode: screen" />
+            <polyline id="magenta-line" fill="none" points="890,29 97,66 97,286 837,286 890,29" stroke="#ff78c1" stroke-width="2" />
+            <polygon id="green-fill" fill="#72e08b" fill-opacity=".86" points="467,-14 837,66 837,286 97,286 97,66" style="mix-blend-mode: screen" />
+            <g fill="none" stroke="#9bf2a9" stroke-opacity=".92" stroke-width="2">
+              <line id="green-tl" x1="467" y1="-14" x2="97" y2="66" />
+              <line id="green-tr" x1="467" y1="-14" x2="837" y2="66" />
+              <line id="green-bl" x1="467" y1="-14" x2="97" y2="286" />
+              <line id="green-br" x1="467" y1="-14" x2="837" y2="286" />
+            </g>
+          </svg>
+          <span id="cyan-k9" aria-label="Negative-verse K9 projecting cyan" class="pointer-events-none absolute z-40" role="img" style="left:1.7%; top:8.2%; perspective:180px">
+            <img
+              src="assets/k9-negative.svg"
+              alt=""
+              class="block w-6 max-w-none drop-shadow-[0_0_8px_rgba(57,191,244,.85)] sm:w-[clamp(2.45rem,4.7vw,3rem)]"
+              style="transform-origin:77.5% 43.35%; transform:translate(-77.5%,-43.35%) scaleX(-1) rotateY(-15deg) rotateZ(-8deg)"
+            />
+          </span>
+          <span id="magenta-k9" aria-label="Beta-verse K9 projecting magenta" class="pointer-events-none absolute z-40" role="img" style="left:91.38%; top:8.79%; perspective:180px">
+            <img
+              src="assets/k9-beta.svg"
+              alt=""
+              class="block w-6 max-w-none drop-shadow-[0_0_8px_rgba(223,21,139,.85)] sm:w-[clamp(2.45rem,4.7vw,3rem)]"
+              style="transform-origin:22.5% 43.35%; transform:translate(-22.5%,-43.35%) rotateY(15deg) rotateZ(8deg)"
+            />
+          </span>
+          <span id="green-k9" aria-label="Religioverse K9 projecting green" class="pointer-events-none absolute z-40" role="img" style="left:47.95%; top:-4.24%; perspective:220px">
+            <img
+              src="assets/k9-religioverse.svg"
+              alt=""
+              class="block w-[1.65rem] max-w-none drop-shadow-[0_0_10px_rgba(114,224,139,.9)] sm:w-[clamp(3.1rem,6.4vw,4.2rem)]"
+              style="transform-origin:50% 48.42%; transform:translate(-50%,-48.42%) rotateX(16deg) rotateY(-5deg) rotateZ(2deg)"
+            />
+          </span>
+
+          <button id="comic-advance" type="button" class="relative z-20 mx-auto block w-[86%] max-w-[1100px] overflow-hidden text-left" aria-label="Show next comic">
+            <img
+              id="comic-image"
+              src="assets/comics/034.png"
+              alt="No Clue original run strip 034"
+              class="block h-auto w-full"
+              decoding="sync"
+            />
+          </button>
+        </section>
+
+        <nav aria-label="Social links" class="mx-auto grid w-full max-w-[974px] grid-cols-4 items-center gap-x-4 gap-y-2 px-[5.5%] py-2 text-center sm:grid-cols-7">
+          <a class="social-link" href="#facebook">Facebook</a>
+          <a class="social-link" href="#twitter">Twitter</a>
+          <a class="social-link" href="#gplus">G+</a>
+          <a class="social-link" href="#instagram">Instagram</a>
+          <a class="social-link" href="#pinterest">Pinterest</a>
+          <a class="social-link" href="#rss">RSS</a>
+          <a class="social-link col-span-2 sm:col-span-1" href="#topocomics">TopoComics.com</a>
+        </nav>
+
+        <nav aria-label="Comic navigation" class="mx-auto grid w-full max-w-[974px] grid-cols-2 gap-1 py-1 sm:grid-cols-4 sm:gap-3">
+          <button id="first-comic" type="button" class="comic-control" aria-label="First comic">
+            <span class="arrow-shape first"><span class="comic-copy max-w-12 text-sm leading-[.78]">First<br />Comic</span></span>
+          </button>
+          <button id="previous-comic" type="button" class="comic-control" aria-label="Previous comic">
+            <span class="arrow-shape"><span class="comic-copy text-base">Back</span></span>
+          </button>
+          <button id="next-comic" type="button" class="comic-control order-4 sm:order-3" aria-label="Next comic">
+            <span class="arrow-shape right"><span class="comic-copy text-base">Next</span></span>
+          </button>
+          <button id="newest-comic" type="button" class="comic-control order-3 sm:order-4" aria-label="Newest comic">
+            <span class="arrow-shape newest"><span class="comic-copy max-w-14 text-sm leading-[.78]">Newest<br />Comic</span></span>
+          </button>
+        </nav>
+
+        <article class="mx-auto mt-1 w-full max-w-[974px] border border-[#4149ad] bg-clue-panel shadow-[inset_0_1px_0_rgba(255,255,255,.08)]">
+          <header class="grid gap-2 border-b border-[#5159b7] px-4 py-2 sm:grid-cols-[120px_1fr_120px] sm:items-center">
+            <p id="strip-position" class="comic-copy ink-text text-center text-[1.05rem] sm:text-left">Strip 41 of 41</p>
+            <h2 id="strip-title" class="ink-text font-display text-center text-[clamp(1.5rem,3vw,2rem)] leading-none tracking-[.04em]">
+              Original Run — 034
+            </h2>
+            <span aria-hidden="true" class="hidden sm:block"></span>
+          </header>
+          <div class="comic-copy px-5 py-4 text-center text-[clamp(.88rem,1.75vw,1.08rem)] leading-[1.02] sm:px-16 sm:py-5">
+            <p id="strip-file">Archive file: 034.png</p>
+            <p class="mt-3">Written by D. Mongeni · Art and editing by Jake Herrmann · Long Haired Syndicate Studios</p>
+          </div>
+        </article>
+
+        <section id="archive" aria-labelledby="archive-title" class="mx-auto mt-8 w-full max-w-[974px] scroll-mt-4 border border-[#4149ad] bg-[#252074] px-4 py-5 sm:px-6">
+          <div class="mb-4 flex flex-wrap items-end justify-between gap-2">
+            <h2 id="archive-title" class="ink-text font-display text-3xl tracking-[.04em]">Original Run Archive</h2>
+            <p id="archive-count" class="comic-copy text-base text-[#d4cfe0]">41 recovered strips</p>
+          </div>
+          <div id="archive-grid" class="grid grid-cols-4 gap-2 sm:grid-cols-7 md:grid-cols-9"></div>
+        </section>
+
+      </main>
+    </div>
+
+    <script>
+      const comics = [
+        ['001', '001.png'], ['002', '002.png'], ['002_1', '002_1.png'], ['003', '003.png'],
+        ['004', '004.jpg'], ['005', '005.jpg'], ['005_1', '005_1.png'], ['005_2', '005_2.jpg'],
+        ['006', '006.jpg'], ['006_1', '006_1.png'], ['007', '007.jpg'], ['007_1', '007_1.jpg'],
+        ['008', '008.jpg'], ['009', '009.jpg'], ['010', '010.jpg'], ['011', '011.png'],
+        ['011_1', '011_1.jpg'], ['012', '012.jpg'], ['012_1', '012_1.png'], ['013', '013.jpg'],
+        ['014', '014.jpg'], ['016', '016.png'], ['017', '017.png'], ['018', '018.png'],
+        ['019', '019.jpg'], ['020', '020.png'], ['021', '021.png'], ['022', '022.png'],
+        ['023', '023.png'], ['024', '024.png'], ['025', '025.png'], ['026', '026.png'],
+        ['027', '027.png'], ['027_1', '027_1.png'], ['028', '028.png'], ['029', '029.png'],
+        ['030', '030.png'], ['031', '031.png'], ['032', '032.png'], ['033', '033.png'],
+        ['034', '034.png'],
+      ].map(([id, file]) => ({ id, file, label: id.replace('_', '.') }));
+
+      const stage = document.querySelector('#comic-stage');
+      const viewer = document.querySelector('#comic-advance');
+      const comicImage = document.querySelector('#comic-image');
+      const stripPosition = document.querySelector('#strip-position');
+      const stripTitle = document.querySelector('#strip-title');
+      const stripFile = document.querySelector('#strip-file');
+      const archiveGrid = document.querySelector('#archive-grid');
+      const firstButton = document.querySelector('#first-comic');
+      const previousButton = document.querySelector('#previous-comic');
+      const nextButton = document.querySelector('#next-comic');
+      const newestButton = document.querySelector('#newest-comic');
+      let currentIndex = comics.length - 1;
+
+      const pointList = (points) => points.map(([x, y]) => `${x},${y}`).join(' ');
+
+      function updateProjectionGeometry() {
+        const stageRect = stage.getBoundingClientRect();
+        const viewerRect = viewer.getBoundingClientRect();
+        if (!stageRect.width || !stageRect.height || !viewerRect.width) return;
+
+        const left = viewerRect.left - stageRect.left;
+        const right = viewerRect.right - stageRect.left;
+        const top = viewerRect.top - stageRect.top;
+        const bottom = viewerRect.bottom - stageRect.top;
+        const sideGutter = Math.max(22, Math.min(50, stageRect.width * .04));
+        const cyan = [Math.max(18, left - sideGutter), Math.max(8, top - 31)];
+        const magenta = [Math.min(stageRect.width - 18, right + sideGutter), Math.max(8, top - 31)];
+        const green = [(left + right) / 2, top - 68];
+        const tl = [left, top];
+        const tr = [right, top];
+        const bl = [left, bottom];
+        const br = [right, bottom];
+
+        document.querySelector('#beam-svg').setAttribute('viewBox', `0 0 ${stageRect.width} ${stageRect.height}`);
+        document.querySelector('#cyan-fill').setAttribute('points', pointList([cyan, tr, br, bl]));
+        document.querySelector('#cyan-line').setAttribute('points', pointList([cyan, tr, br, bl, cyan]));
+        document.querySelector('#magenta-fill').setAttribute('points', pointList([magenta, tl, bl, br]));
+        document.querySelector('#magenta-line').setAttribute('points', pointList([magenta, tl, bl, br, magenta]));
+        document.querySelector('#green-fill').setAttribute('points', pointList([green, tr, br, bl, tl]));
+
+        [['#green-tl', tl], ['#green-tr', tr], ['#green-bl', bl], ['#green-br', br]].forEach(([selector, target]) => {
+          const line = document.querySelector(selector);
+          line.setAttribute('x1', green[0]);
+          line.setAttribute('y1', green[1]);
+          line.setAttribute('x2', target[0]);
+          line.setAttribute('y2', target[1]);
+        });
+
+        const compact = window.matchMedia('(max-width: 639px)').matches;
+        const cyanK9 = document.querySelector('#cyan-k9');
+        const magentaK9 = document.querySelector('#magenta-k9');
+        const greenK9 = document.querySelector('#green-k9');
+
+        cyanK9.style.left = `${cyan[0] - (compact ? 13 : 26)}px`;
+        cyanK9.style.top = `${cyan[1]}px`;
+        magentaK9.style.left = `${magenta[0]}px`;
+        magentaK9.style.top = `${magenta[1]}px`;
+        greenK9.style.left = `${green[0]}px`;
+        greenK9.style.top = `${green[1]}px`;
+      }
+
+      function updateAddress(comic, mode) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('comic', comic.id);
+        url.hash = '';
+        history[mode === 'push' ? 'pushState' : 'replaceState']({ comic: comic.id }, '', url);
+      }
+
+      function preloadNeighbor(index) {
+        if (index < 0 || index >= comics.length) return;
+        const preload = new Image();
+        preload.src = `assets/comics/${comics[index].file}`;
+      }
+
+      function showComic(index, { historyMode = 'push', scroll = false } = {}) {
+        currentIndex = Math.max(0, Math.min(index, comics.length - 1));
+        const comic = comics[currentIndex];
+        comicImage.src = `assets/comics/${comic.file}`;
+        comicImage.alt = `No Clue original run strip ${comic.label}`;
+        stripPosition.textContent = `Strip ${currentIndex + 1} of ${comics.length}`;
+        stripTitle.textContent = `Original Run — ${comic.label}`;
+        stripFile.textContent = `Archive file: ${comic.file}`;
+        viewer.disabled = currentIndex === comics.length - 1;
+        viewer.setAttribute('aria-label', viewer.disabled ? `Newest comic, ${comic.label}` : `Show comic ${comics[currentIndex + 1].label}`);
+        firstButton.disabled = currentIndex === 0;
+        previousButton.disabled = currentIndex === 0;
+        nextButton.disabled = currentIndex === comics.length - 1;
+        newestButton.disabled = currentIndex === comics.length - 1;
+        document.title = `No Clue‽ Original Run ${comic.label}`;
+
+        archiveGrid.querySelectorAll('button').forEach((button, buttonIndex) => {
+          button.setAttribute('aria-current', buttonIndex === currentIndex ? 'true' : 'false');
+        });
+
+        updateAddress(comic, historyMode);
+        preloadNeighbor(currentIndex - 1);
+        preloadNeighbor(currentIndex + 1);
+        if (comicImage.complete) requestAnimationFrame(updateProjectionGeometry);
+        if (scroll) stage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      comics.forEach((comic, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'archive-strip';
+        button.textContent = comic.label;
+        button.setAttribute('aria-label', `Open original run strip ${comic.label}`);
+        button.addEventListener('click', () => showComic(index, { scroll: true }));
+        archiveGrid.appendChild(button);
+      });
+
+      firstButton.addEventListener('click', () => showComic(0));
+      previousButton.addEventListener('click', () => showComic(currentIndex - 1));
+      nextButton.addEventListener('click', () => showComic(currentIndex + 1));
+      newestButton.addEventListener('click', () => showComic(comics.length - 1));
+      viewer.addEventListener('click', () => {
+        if (currentIndex < comics.length - 1) showComic(currentIndex + 1);
+      });
+      comicImage.addEventListener('load', updateProjectionGeometry);
+      window.addEventListener('resize', () => requestAnimationFrame(updateProjectionGeometry));
+      window.addEventListener('popstate', () => {
+        const id = new URL(window.location.href).searchParams.get('comic');
+        const index = comics.findIndex((comic) => comic.id === id);
+        showComic(index >= 0 ? index : comics.length - 1, { historyMode: 'replace' });
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.target.matches('input, textarea, select, button')) return;
+        if (event.key === 'ArrowLeft' && currentIndex > 0) showComic(currentIndex - 1);
+        if (event.key === 'ArrowRight' && currentIndex < comics.length - 1) showComic(currentIndex + 1);
+      });
+
+      const requestedId = new URL(window.location.href).searchParams.get('comic');
+      const requestedIndex = comics.findIndex((comic) => comic.id === requestedId);
+      showComic(requestedIndex >= 0 ? requestedIndex : comics.length - 1, { historyMode: 'replace' });
+    </script>
+  </body>
+</html>

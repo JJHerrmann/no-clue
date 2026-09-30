@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { @apply scroll-smooth bg-clue-night; }
+  body {
+    @apply m-0 min-h-screen overflow-x-hidden bg-clue-night text-white antialiased;
+    background-image:
+      radial-gradient(circle at 50% 44%, rgba(50, 58, 171, .24), transparent 42%),
+      linear-gradient(180deg, #21186b 0%, #19125d 100%);
+  }
+  a { @apply transition-transform duration-150; }
+  a:hover { @apply -translate-y-0.5 text-clue-cyan; }
+  a:focus-visible, button:focus-visible { @apply outline outline-4 outline-offset-4 outline-clue-cyan; }
+}
+
+@layer components {
+  .ink-text {
+    text-shadow: 2px 2px 0 #17152e, -1px -1px 0 #17152e, 1px -1px 0 #17152e, -1px 1px 0 #17152e;
+  }
+  .comic-copy { @apply font-hand font-bold uppercase tracking-[.035em]; }
+  .nav-link { @apply ink-text whitespace-nowrap font-display text-[1.35rem] tracking-[.04em] md:text-[1.65rem]; }
+  .k9-emitter {
+    @apply absolute z-30 flex size-7 items-center justify-center rounded-full border-2 border-[#8e9095] bg-[#3c3e43] shadow-[inset_3px_3px_3px_rgba(255,255,255,.22),0_2px_2px_rgba(0,0,0,.65)];
+  }
+  .k9-emitter::before {
+    content: '';
+    @apply absolute -top-2 left-1/2 h-2 w-3 -translate-x-1/2 rounded-t-sm border-x border-t border-[#777] bg-[#27292d];
+  }
+  .k9-emitter::after {
+    content: '';
+    @apply size-2.5 rounded-full bg-current shadow-[0_0_8px_3px_currentColor];
+  }
+  .projection-layer {
+    @apply pointer-events-none absolute inset-0 z-10 overflow-hidden;
+  }
+  .projection-layer::before,
+  .projection-layer::after {
+    content: '';
+    @apply absolute inset-0;
+    mix-blend-mode: screen;
+  }
+  .projection-layer::before {
+    background: linear-gradient(90deg, rgba(31, 205, 255, .44) 0%, rgba(31, 205, 255, .15) 38%, transparent 72%);
+    clip-path: polygon(0 0, 100% 3%, 100% 100%, 38% 100%);
+  }
+  .projection-layer::after {
+    background: linear-gradient(270deg, rgba(245, 12, 151, .42) 0%, rgba(245, 12, 151, .14) 38%, transparent 72%);
+    clip-path: polygon(100% 0, 0 3%, 0 100%, 62% 100%);
+  }
+  .projection-overlap {
+    @apply pointer-events-none absolute inset-0 z-20;
+    background: radial-gradient(ellipse at 50% 52%, rgba(255,255,255,.15), transparent 62%);
+    mix-blend-mode: screen;
+  }
+  .social-link { @apply ink-text font-display text-[1rem] tracking-[.035em] sm:text-[1.22rem]; }
+  .comic-control { @apply flex min-h-16 items-center justify-center gap-1 text-center disabled:cursor-not-allowed disabled:opacity-35; }
+  .arrow-shape {
+    @apply relative flex h-12 min-w-[6.1rem] items-center justify-center border-2 border-[#15151f] bg-[#888a8e] px-3 text-white shadow-[inset_0_0_0_1px_#c7c8ca,2px_2px_0_rgba(0,0,0,.3)] transition-colors;
+    clip-path: polygon(23% 0, 23% 28%, 100% 28%, 100% 72%, 23% 72%, 23% 100%, 0 50%);
+  }
+  .comic-control:not(:disabled):hover .arrow-shape { @apply bg-clue-cyan; }
+  .arrow-shape.right { clip-path: polygon(0 28%, 77% 28%, 77% 0, 100% 50%, 77% 100%, 77% 72%, 0 72%); }
+  .arrow-shape.first { clip-path: polygon(12% 18%, 20% 30%, 30% 30%, 30% 10%, 0 50%, 30% 90%, 30% 70%, 100% 70%, 100% 30%, 30% 30%, 20% 30%); }
+  .arrow-shape.newest { clip-path: polygon(0 30%, 70% 30%, 70% 10%, 100% 50%, 70% 90%, 70% 70%, 80% 70%, 88% 82%, 88% 70%, 0 70%); }
+  .archive-strip { @apply border border-[#5962c3] bg-[#292582] px-2 py-2 font-display text-lg tracking-[.04em] text-white transition hover:-translate-y-0.5 hover:border-clue-cyan hover:bg-[#37319d] hover:text-clue-cyan focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-clue-cyan; }
+  .archive-strip[aria-current="true"] { @apply border-clue-pink bg-[#44328c] text-white shadow-[inset_0_0_0_2px_rgba(223,21,139,.45)]; }
+}
