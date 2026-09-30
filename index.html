@@ -246,7 +246,7 @@
         stripPosition.textContent = `Strip ${currentIndex + 1} of ${comics.length}`;
         stripTitle.textContent = `Original Run — ${comic.label}`;
         stripFile.textContent = `Archive file: ${comic.file}`;
-        restorationNote.classList.toggle('hidden', !['005_1', '006_1'].includes(comic.id));
+        restorationNote.classList.toggle('hidden', !['005_1', '006_1', '007_1'].includes(comic.id));
         viewer.disabled = currentIndex === comics.length - 1;
         viewer.setAttribute('aria-label', viewer.disabled ? `Newest comic, ${comic.label}` : `Show comic ${comics[currentIndex + 1].label}`);
         firstButton.disabled = currentIndex === 0;
