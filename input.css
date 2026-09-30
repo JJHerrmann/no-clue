@@ -21,6 +21,12 @@
   }
   .comic-copy { @apply font-hand font-bold uppercase tracking-[.035em]; }
   .nav-link { @apply ink-text whitespace-nowrap font-display text-[1.35rem] tracking-[.04em] md:text-[1.65rem]; }
+  .nav-defunct { @apply relative inline-block cursor-not-allowed opacity-60; }
+  .nav-defunct::after {
+    content: 'DEFUNCT';
+    @apply pointer-events-none absolute left-1/2 top-1/2 border border-clue-pink bg-[#21186b] px-1 font-hand text-[.58rem] font-bold leading-none tracking-[.12em] text-[#ff8bc9] shadow-[1px_1px_0_#17152e] md:text-[.64rem];
+    transform: translate(-50%, -50%) rotate(-8deg);
+  }
   .k9-emitter {
     @apply absolute z-30 flex size-7 items-center justify-center rounded-full border-2 border-[#8e9095] bg-[#3c3e43] shadow-[inset_3px_3px_3px_rgba(255,255,255,.22),0_2px_2px_rgba(0,0,0,.65)];
   }
