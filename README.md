@@ -4,6 +4,8 @@ Live site: <https://noclue.rook.works>
 
 A single-page, responsive reconstruction of the supplied No Clue! webcomic screenshot. It keeps the original desktop-era visual language while letting the layout reflow for smaller screens.
 
+The Characters page reconstructs the cast from the surviving strips and script archive. It links every biographical claim back to relevant comics and explicitly separates confirmed facts, strong inferences, and unresolved archive questions.
+
 The reader includes all 41 image files currently stored in the original-run archive. FIRST, BACK, NEXT, and NEWEST are functional; the comic image advances on click; the left and right arrow keys navigate; and every strip can be opened from the archive grid. The selected strip is retained in the page URL as `?comic=034`.
 
 On a wide desktop viewport, the projection stage expands to 1280 pixels and the comic viewer displays strips at up to their native 1100-pixel width. It scales down fluidly on smaller screens.
