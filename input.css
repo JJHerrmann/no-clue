@@ -82,9 +82,4 @@
   .confidence-confirmed { @apply border-clue-cyan bg-[#173f7c] text-[#bdeeff]; }
   .confidence-inferred { @apply border-clue-pink bg-[#632162] text-[#ffd0e9]; }
   .confidence-open { @apply border-[#90df9c] bg-[#205837] text-[#d4ffda]; }
-  .author-card { @apply relative overflow-hidden border border-[#5962c3] bg-[#292582] shadow-[inset_0_1px_0_rgba(255,255,255,.09),5px_6px_0_rgba(8,7,49,.46)]; }
-  .author-monogram { @apply ink-text flex min-h-56 items-center justify-center overflow-hidden border-b border-[#5962c3] font-display text-[8rem] leading-none tracking-[.02em] md:min-h-full md:border-b-0 md:border-r; }
-  .credit-role { @apply comic-copy text-lg leading-none tracking-[.06em]; }
-  .production-step { @apply relative border border-[#5962c3] bg-[#252074] px-4 pb-4 pt-9 text-center; }
-  .production-number { @apply absolute left-1/2 top-0 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-[#17152e] bg-clue-cyan font-display text-xl text-[#17152e]; }
 }

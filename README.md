@@ -6,8 +6,6 @@ The official online archive for *No Clue!? The Webcomic*. The site keeps the com
 
 The Characters page introduces the cast and links each profile to relevant strips.
 
-The Authors page records D. Mongeni as the original credited writer and Jake Herrmann as a writing contributor, artist, and editor.
-
 The reader includes all 41 image files currently stored in the original-run archive. FIRST, BACK, NEXT, and NEWEST are functional; the comic image advances on click; the left and right arrow keys navigate; and every strip can be opened from the archive grid. The selected strip is retained in the page URL as `?comic=034`.
 
 On a wide desktop viewport, the projection stage expands to 1280 pixels and the comic viewer displays strips at up to their native 1100-pixel width. It scales down fluidly on smaller screens.
